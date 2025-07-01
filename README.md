@@ -48,30 +48,59 @@ chemical_research_agent/
 ```bash
 git clone https://github.com/your-username/chemical-research-agent.git
 cd chemical_research_agent
+```
 
 ### 2. (Optional) Create a virtual environment
-python -m venv venv
-# Activate:
-venv\Scripts\activate      # on Windows
-source venv/bin/activate   # on macOS/Linux
 
-### 3. Install the dependencies
+```bash
+python -m venv venv
+```
+
+**Activate the environment:**
+
+- On **Windows**:
+  ```bash
+  venv\Scripts\activate
+  ```
+- On **macOS/Linux**:
+  ```bash
+  source venv/bin/activate
+  ```
+
+### 3. Install dependencies
+
+```bash
 pip install -r requirements.txt
+```
 
 ### 4. Run the Streamlit app
+
+```bash
 streamlit run app.py
+```
 
+---
 
-If you're behind a proxy or using a custom SSL cert, edit config.py:
-python
-Copy code
+### ⚙️ SSL Configuration (Optional)
+
+If you're behind a proxy or using a custom SSL certificate, you can configure it in `config.py`:
+
+```python
 CUSTOM_CERT_PATH = "path/to/your.pem"
 DISABLE_SSL_VERIFY = True  # Not recommended in production
+```
+
+---
 
 ### 📚 Data Sources
-🔬 PubChem
-📘 Semantic Scholar
-📖 CrossRef
-📜 arXiv
-🧪 ChEBI
-⚙️ Streamlit
+
+This app integrates with multiple scientific and open-access APIs:
+
+- 🔬 [PubChem](https://pubchem.ncbi.nlm.nih.gov/)
+- 📘 [Semantic Scholar](https://www.semanticscholar.org/)
+- 📖 [CrossRef](https://www.crossref.org/)
+- 📜 [arXiv](https://arxiv.org/)
+- 🧪 [ChEBI](https://www.ebi.ac.uk/chebi/)
+- ⚙️ [Streamlit](https://streamlit.io/)
+
+---
